@@ -13,10 +13,8 @@ public class App
         System.out.println("kurā grupa tu esi?");
         String group = scanner.nextLine();
 
-        System.out.println("tu atbildeji:");
-        System.out.println(name);
-        System.out.println(surname);
-        System.out.println(group);
+        System.out.println("tu atbildeji: " + name + " " + surname +  " " + group);
+
 
 
     }
