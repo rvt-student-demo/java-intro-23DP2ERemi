@@ -5,37 +5,40 @@ public class App
 {
     public static void main( String[] args )
     {
+
         // Scanner scanner = new Scanner(System.in);
-        // System.out.println("kā tevi sauc?");
-        // String name = scanner.nextLine();
-        // System.out.println("Ievadi savu uzvardi:");
-        // String surname = scanner.nextLine();
-        // System.out.println("kurā grupa tu esi?");
-        // String group = scanner.nextLine();
-
-        // System.out.println("tu atbildeji: " + name + " " + surname +  " " + group);
-
-        int Chicken = 9000;
-        double Bacon = 0.1;
-        String Tractor = "Zetor";
-
-        System.out.println("Chicken:");
-        System.out.println(Chicken);
-        System.out.println("Bacon (kg):");
-        System.out.println(Bacon);
-        System.out.println("Tractor:");
-        System.out.println(Tractor);
-
-        System.out.println(" ");
-
-        System.out.println("And finally, a sumary:");
-        System.out.println(Chicken);
-        System.out.println(Bacon);
-        System.out.println(Tractor);
-
-
 
         
+        // int num1 = Integer.valueOf(scanner.nextLine());
+        // int num2 = Integer.valueOf(scanner.nextLine());
+        // int num3 = Integer.valueOf(scanner.nextLine());
+
+        // int sum = num1 + num2 + num3;
+        // int mult =  num1 * num2 * num3;
+        // double avg = (num1 + num2 + num3) / 3.0;
+
+        // System.out.println("Sum: " + sum);
+        // System.out.println("multiplication: " + mult);
+        // System.out.println("average: " + avg);
+
+        // double value = Double.valueOf(""0,1);
+        // boolean value = Boolean.valueOf(scanner.nextLine());
+
+        // int calculationWithParentheses = 2 + 3 * 7;
+        // System.out.println(calculationWithParentheses); // prints 23
+        
+        // int calculationWithoutParentheses = 1 + 1 + 3 * 2 + 5;
+        // System.out.println(calculationWithoutParentheses); // prints 13
+        
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("enter your speed:");
+        int speed = Integer.valueOf(scanner.nextLine());
+
+        if (speed > 120){
+            System.out.println("Speed ticket!");
+        }
     }
 
    
