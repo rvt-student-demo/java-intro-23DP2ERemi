@@ -6,7 +6,18 @@ public class App
     public static void main( String[] args )
     {
 
-        // Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("give first number:");
+        int num1 = Integer.valueOf(scanner.nextLine());
+        System.out.println("give second number:");
+        int num2 = Integer.valueOf(scanner.nextLine());
+
+        if (num1 > num2){
+            System.out.println("Grater number is: " + num1);
+        }
+        else if (num2 > num1){
+            System.out.println("Grater number is: " + num2);
+        }
 
         
         // int num1 = Integer.valueOf(scanner.nextLine());
@@ -31,14 +42,23 @@ public class App
         // System.out.println(calculationWithoutParentheses); // prints 13
         
 
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
 
-        System.out.println("enter your speed:");
-        int speed = Integer.valueOf(scanner.nextLine());
+        // System.out.println("give speed:");
 
-        if (speed > 120){
-            System.out.println("Speed ticket!");
-        }
+        // int speed = Integer.valueOf(scanner.nextLine());
+
+        // if (speed > 120){
+        //     System.out.println("Speed ticket!");
+        // }
+        // Scanner scanner = new Scanner(System.in);
+        // int atzime = Integer.valueOf(scanner.nextLine());
+        // if (atzime == 1){
+        //     System.out.println("slikti");
+        // }
+        // else if (atzime == 2){
+
+        // }
     }
 
    
