@@ -1,28 +1,38 @@
 package lv.rvt;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class App 
 {
 
-public static void main(String[] args) {
-    int[] valA = {13,-22,82, 17};
-    int[] valB = {0, 0, 0, 0};
+    public static void main(String[] args) {
+        // Student matt = new Student();
+        // // Code is placed here
+        // Person  person = new Person("mark");
 
-    for (int i = 0; i < valB.length; i++) {
-        valB[i] = 25 -  valA[i];
+        Product product = new Product("plum", 2, 30);
+        product.printProduct();
     }
 
-    System.out.println("ValA: "
-    + valA[0] + " " + valA[1] + " "  + valA[2] + " " + valA[3]);
+// public static void main(String[] args) {
+//     int[] valA = {13,-22,82, 17};
+//     int[] valB = {0, 0, 0, 0};
 
-    System.out.println("ValB: "
-    + valB[0] + " " + valB[1] + " "  + valB[2] + " " + valB[3]);
+//     for (int i = 0; i < valB.length; i++) {
+//         valB[i] = 25 -  valA[i];
+//     }
+
+//     System.out.println("ValA: "
+//     + valA[0] + " " + valA[1] + " "  + valA[2] + " " + valA[3]);
+
+//     System.out.println("ValB: "
+//     + valB[0] + " " + valB[1] + " "  + valB[2] + " " + valB[3]);
 
     
-    System.out.println("sum: "
-    + (valA[0]+valB[0]) + " " + (valA[1]+valB[1] + " " + (valA[2]+valB[2]) + " " + (valA[3]+valB[3])));
-}
+//     System.out.println("sum: "
+//     + (valA[0]+valB[0]) + " " + (valA[1]+valB[1] + " " + (valA[2]+valB[2]) + " " + (valA[3]+valB[3])));
+
+
+ }
 
 
 
@@ -80,7 +90,7 @@ public static void main(String[] args) {
 //     if (i >= lowerLimit && i <= upperLimit){
 //         System.out.println(i);
 //     }
-}
+
 
 
 
