@@ -5,12 +5,15 @@ public class App
 {
 
     public static void main(String[] args) {
-        // Student matt = new Student();
-        // // Code is placed here
-        // Person  person = new Person("mark");
+        DecreasingCounter counter = new DecreasingCounter(10);
 
-        Product product = new Product("plum", 2, 30);
-        product.printProduct();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
     }
 
 // public static void main(String[] args) {
