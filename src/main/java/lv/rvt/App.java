@@ -3,28 +3,27 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter numbers: ");
-        statistics statistics = new statistics();
-        statistics evenNumbers = new statistics();
-        statistics oddNumbers = new statistics();
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
 
+        System.out.println("pauls balance: " + paulsCard);
+        System.out.println("matts balance: " + mattsCard);
 
-        while (true){
-            int number = Integer.valueOf(input.nextLine());
-            if (number <= -1){
-                break;
-            }
-            statistics.addNumber(number);
-            if (number % 2 == 0){
-                evenNumbers.addNumber(number);
-            } else{
-                oddNumbers.addNumber(number);
-            }
-        }
+        paulsCard.addMoney(20);
 
-        System.out.println("Count: " + statistics.getCount() + " Sum: " + statistics.Sum() + " Avg: " + statistics.getAvg() + " Even number sum: " + evenNumbers.Sum() + " Odd number sum: " + oddNumbers.Sum() );
+        mattsCard.eatHeartily();
+        System.out.println("pauls balance: " + paulsCard);
+        System.out.println("matts balance: " + mattsCard);
+        
+        paulsCard.eatAffordably();
+        mattsCard.eatAffordably();
+
+        mattsCard.addMoney(50);
+
+        System.out.println("pauls balance: " + paulsCard);
+        System.out.println("matts balance: " + mattsCard);
     }
 }
