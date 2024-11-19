@@ -1,29 +1,17 @@
 package lv.rvt;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.BufferedReader;
 public class App {
-    public static void main(String[] args) {
-        PaymentCard paulsCard = new PaymentCard(20);
-        PaymentCard mattsCard = new PaymentCard(30);
 
-        paulsCard.eatHeartily();
-        mattsCard.eatAffordably();
+    public static void main(String[] args){
 
-        System.out.println("pauls balance: " + paulsCard);
-        System.out.println("matts balance: " + mattsCard);
-
-        paulsCard.addMoney(20);
-
-        mattsCard.eatHeartily();
-        System.out.println("pauls balance: " + paulsCard);
-        System.out.println("matts balance: " + mattsCard);
+        Product tapeMeasure = new Product("Tape measure");
+        Product plaster = new Product("Plaster", "home improvement section");
+        Product tyre = new Product("Tyre", 5);
         
-        paulsCard.eatAffordably();
-        mattsCard.eatAffordably();
-
-        mattsCard.addMoney(50);
-
-        System.out.println("pauls balance: " + paulsCard);
-        System.out.println("matts balance: " + mattsCard);
+        System.out.println(tapeMeasure);
+        System.out.println(plaster);
+        System.out.println(tyre);
     }
 }

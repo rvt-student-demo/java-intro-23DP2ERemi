@@ -1,37 +1,50 @@
-// package lv.rvt;
+package lv.rvt;
+public class Person {
 
-// public class Person {
-//     private String name;
-//     private int age;
-//     private int weight;
-//     private int height;
+    Private String name;
+    Private int age;
+    Private int weight;
+    Private int height;
 
-//     public Person(String initialName) {
-//         this.age = 0;
-//         this.weight = 0;
-//         this.height = 0;
-//         this.name = initialName;
-//     }
+    public Person(String name, int age, int weight, int height) {
+        this.name = name;
+        this.age = 0;
+        this.weight = 0;
+        this.height = 0;
+    }
+    public Person(String name) {
+        this(name, );
+        //here the code of the second constructor is run, and the age is set to 0
+    }
 
-//     public void setHeight(int newHeight) {
-//         this.height = newHeight;
-//     }
+    public String getName() {
+        return this.name;
+    }
 
-//     public void setWeight(int newWeight) {
-//         this.weight = newWeight;
-//     }
+    public int getAge() {
+        return this.age;
+    }
 
-//     public void getName(){
-//         return this.name;
-//     }
+    public void growOlder() {
+        this.age = this.age + 1;
+    }
 
-//     public double bodyMassIndex() {
-//         double heigthPerHundred = this.height / 100.0;
-//         return this.weight / (heigthPerHundred * heigthPerHundred);
-//     }
+    public void setHeight(int newHeight) {
+        this.height = newHeight;
+    }
 
-//     public String toString() {
-//         return this.name + ", age " + this.age + " years, " + this.height + "height, " + this.weight + "weight";
-//     }
+    public void setWeight(int newWeight) {
+        this.weight = newWeight;
+    }
 
-// }
+    public double bodyMassIndex() {
+        double heightDivByHundred = this.height / 100.0;
+        return this.weight / (heightDivByHundred * heightDivByHundred);
+    }
+
+    @Override
+    public String toString() {
+        return this.name + ", age " + this.age + " years";
+    }
+}
+   
