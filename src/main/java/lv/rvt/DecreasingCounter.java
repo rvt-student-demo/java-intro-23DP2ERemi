@@ -6,11 +6,17 @@ public class DecreasingCounter {
     public DecreasingCounter(int initialValue) {
         this.value = initialValue;
     }
+    public Counter(int initialValue) {
+        this.value = 0;
+    }
 
     public void printValue() {
         System.out.println("value: " + this.value);
     }
 
+    public void increase() {
+        this.value += 1;
+    }
     public void decrement() {
         // write the method implementation here
         // the aim is to decrement the value of the counter by one
