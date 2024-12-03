@@ -1,20 +1,20 @@
 package lv.rvt;
+
 public class Person {
 
-    Private String name;
-    Private int age;
-    Private int weight;
-    Private int height;
+    private String name;
+    private int age;
+    private int weight;
+    private int height;
 
     public Person(String name, int age, int weight, int height) {
         this.name = name;
-        this.age = 0;
-        this.weight = 0;
-        this.height = 0;
+        this.age = age; 
+        this.weight = weight; 
+        this.height = height; 
     }
     public Person(String name) {
-        this(name, );
-        //here the code of the second constructor is run, and the age is set to 0
+        this(name, 0, 0, 0);
     }
 
     public String getName() {
@@ -38,13 +38,15 @@ public class Person {
     }
 
     public double bodyMassIndex() {
+        if (this.height == 0) {
+            throw new IllegalArgumentException("Height cannot be zero.");
+        }
         double heightDivByHundred = this.height / 100.0;
         return this.weight / (heightDivByHundred * heightDivByHundred);
     }
 
     @Override
     public String toString() {
-        return this.name + ", age " + this.age + " years";
+        return (this.name != null ? this.name : "Unknown") + ", age " + this.age + " years";
     }
 }
-   

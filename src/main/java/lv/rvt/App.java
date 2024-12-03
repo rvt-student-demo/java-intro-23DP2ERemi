@@ -1,17 +1,30 @@
 package lv.rvt;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.BufferedReader;
+import lv.PersonManager; 
+import java.io.IOException;
+
 public class App {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException, Exception { 
 
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
-        
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("name:");
+        String name = scanner.nextLine();
+        System.out.println("age:");
+        int age = scanner.nextInt();
+        scanner.nextLine(); 
+
+        Person person = new Person(name, age);
+        PersonManager.addPerson(person);
+        System.out.println("Thank you for registering");
+
+        ArrayList<Person> persons = PersonManager.getPersonList(); 
+        for (Person p : persons) {
+            System.out.println(p);
+        }
+
+        scanner.close();
     }
 }
