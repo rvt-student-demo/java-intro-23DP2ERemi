@@ -7,18 +7,15 @@ import java.util.ArrayList;
 
 public class PersonManager {
     public static ArrayList<Person> getPersonList() throws Exception {
-
         ArrayList<Person> persons = new ArrayList<>();
-        BufferedReader reader = Helper.getReader("src/data/person.csv");
+        BufferedReader reader = Helper.getReader("person.csv");
 
-        reader.readLine();
+        reader.readLine(); 
         String line;
 
-
         while ((line = reader.readLine()) != null) {
-            String[] data = line.split(", ");
-
-            Person person1 = new Person(data[0], Integer.valueOf(data[1]), Double.valueOf(data[2]), Double.valueOf(data[3]));
+            String[] data = line.split(",\\s*");
+            Person person1 = new Person(data[0], Integer.valueOf(data[1]), Integer.valueOf(data[2]), Integer.valueOf(data[3]));
             persons.add(person1);
         }
         reader.close();
